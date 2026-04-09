@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#00d2ff",
+                        "on-error-container": "#570008",
+                        "on-tertiary-fixed": "#001444",
+                        "on-primary-container": "#004253",
+                        "on-tertiary": "#f1f2ff",
+                        "surface-container-highest": "#c8e0f8",
+                        "error": "#b31b25",
+                        "tertiary-container": "#94aeff",
+                        "on-secondary-fixed": "#580078",
+                        "surface-variant": "#c8e0f8",
+                        "on-primary-fixed": "#002c38",
+                        "surface-container-low": "#e7f2ff",
+                        "inverse-on-surface": "#8e9faf",
+                        "on-secondary-fixed-variant": "#792c97",
+                        "on-primary-fixed-variant": "#004c5e",
+                        "error-dim": "#9f0519",
+                        "tertiary": "#2f55b7",
+                        "inverse-surface": "#010f1c",
+                        "primary-dim": "#00576b",
+                        "surface-bright": "#f2f7ff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-dim": "#2048ab",
+                        "secondary": "#8539a3",
+                        "on-secondary-container": "#6e218d",
+                        "primary-fixed-dim": "#00c3ed",
+                        "on-surface": "#21303e",
+                        "inverse-primary": "#00d2ff",
+                        "secondary-fixed-dim": "#ebadff",
+                        "outline-variant": "#9fafc0",
+                        "outline": "#697988",
+                        "secondary-container": "#f2c1ff",
+                        "on-background": "#21303e",
+                        "error-container": "#fb5151",
+                        "on-surface-variant": "#4d5d6c",
+                        "primary-fixed": "#00d2ff",
+                        "secondary-dim": "#782b96",
+                        "surface-dim": "#bed7f1",
+                        "on-error": "#ffefee",
+                        "tertiary-fixed-dim": "#809fff",
+                        "tertiary-fixed": "#94aeff",
+                        "surface-tint": "#00647b",
+                        "on-tertiary-fixed-variant": "#00318c",
+                        "on-primary": "#e1f6ff",
+                        "surface-container-high": "#cfe5fc",
+                        "secondary-fixed": "#f2c1ff",
+                        "primary": "#00647b",
+                        "on-tertiary-container": "#002a79",
+                        "background": "#f2f7ff",
+                        "surface": "#f2f7ff",
+                        "on-secondary": "#ffedff",
+                        "surface-container": "#d7eaff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #00647b 0%, #00d2ff 100%);
+        }
+        .amethyst-gradient {
+            background: linear-gradient(135deg, #8539a3 0%, #f2c1ff 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/60 dark:bg-slate-900/60 backdrop-blur-3xl shadow-[0_20px_40px_rgba(33,48,62,0.06)]">
+<div class="flex justify-between items-center px-8 h-20 max-w-[1920px] mx-auto">
+<!-- Brand -->
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white font-headline">Vegecurity</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="font-plus-jakarta text-sm font-medium text-cyan-600 dark:text-cyan-400 border-b-2 border-cyan-500 pb-1" href="#">Browse Projects</a>
+<a class="font-plus-jakarta text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-cyan-500 transition-all duration-300" href="#">Find Talent</a>
+<a class="font-plus-jakarta text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-cyan-500 transition-all duration-300" href="#">About Us</a>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<div class="flex items-center mr-4 border-r border-slate-200/50 pr-4 gap-2">
+<button class="material-symbols-outlined text-slate-600 hover:text-cyan-600" data-icon="language">language</button>
+<span class="text-xs font-bold text-slate-400">EN</span>
+</div>
+<button class="text-slate-600 font-medium text-sm hover:text-cyan-600 px-4 py-2 transition-all">Sign In</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full text-sm font-bold active:scale-95 transition-transform">Join as Client</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section: Organic Asymmetry & Tonal Depth -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden">
+<!-- Background Decorative Elements -->
+<div class="absolute top-0 right-0 w-1/2 h-full bg-surface-container-low -skew-x-12 translate-x-1/4 z-0"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-secondary-container opacity-20 rounded-full blur-3xl"></div>
+<div class="container mx-auto px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 space-y-8">
+<h1 class="text-on-surface font-headline font-extrabold leading-tight text-[3.5rem]">
+                        High-End <span class="text-primary">Freelancing</span> for the Modern Web.
+                    </h1>
+<p class="text-on-surface-variant text-xl max-w-lg leading-relaxed">
+                        The elite marketplace where AI-verified projects meet world-class engineering talent. Experience the digital curator of software development.
+                    </p>
+<!-- Hero CTA Cards -->
+<div class="flex flex-col md:flex-row gap-6 pt-8">
+<!-- Developer Card -->
+<div class="glass-card p-8 rounded-xl flex-1 group hover:shadow-2xl transition-all duration-500 cursor-pointer border border-white/40">
+<div class="w-16 h-16 signature-gradient rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="terminal">terminal</span>
+</div>
+<h3 class="text-2xl font-bold font-headline mb-2 text-on-surface">I am a Developer</h3>
+<p class="text-on-surface-variant text-sm mb-6">Gain access to exclusive high-budget projects and a verified client network.</p>
+<span class="text-primary font-bold inline-flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+                                Apply to Join <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</span>
+</div>
+<!-- Client Card -->
+<div class="glass-card p-8 rounded-xl flex-1 group hover:shadow-2xl transition-all duration-500 cursor-pointer border border-white/40">
+<div class="w-16 h-16 amethyst-gradient rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-amethyst-500/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="business_center">business_center</span>
+</div>
+<h3 class="text-2xl font-bold font-headline mb-2 text-on-surface">I am a Client</h3>
+<p class="text-on-surface-variant text-sm mb-6">Post your high-stakes project and hire the top 1% of engineering talent globally.</p>
+<span class="text-secondary font-bold inline-flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+                                Post a Project <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Abstract Visual / Hero Image -->
+<div class="lg:col-span-6 relative hidden lg:block">
+<div class="relative w-full aspect-square rounded-[3rem] overflow-hidden shadow-[0_40px_80px_rgba(33,48,62,0.1)]">
+<img alt="Advanced Tech Visualization" class="w-full h-full object-cover" data-alt="Abstract 3D digital visualization of neon glowing circuits and flowing data streams in cyan and purple hues, high-tech aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQz4v4Uia4cKcmmjHpMi8pRhdlLkXY-PjKy0bf4BOMNT7uEdTTMPk8MsD_H2N9AkQfBBLeizqllbs9Cf7MWjg1kp3oslhp4jGoe9JCt0bacqsz6VtO8VisoG2XvOiV33e8fPhHTR3PpDM4CbDY2z6EC9S4N3_YIkyweQIGo1jwLCZ5dPP9aQizmZTkhTg2-Unos9Zjfsuomb00Nj35a1maC27cBNT3wBhz_-Iz3VmV4EdoO0jcJOIBvzPRuohp541fLccxZ8ruV8g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+</div>
+<!-- Floating Achievement Card -->
+<div class="absolute -bottom-8 -left-8 glass-card p-6 rounded-2xl shadow-xl border border-white/60 max-w-xs">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xl" data-icon="verified">verified</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Verification Status</p>
+<p class="text-sm font-bold text-on-surface">AI-Vetted Credentials</p>
+</div>
+</div>
+<div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="w-full bg-primary h-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Proposition: Bento Grid Style -->
+<section class="py-32 bg-surface">
+<div class="container mx-auto px-8">
+<div class="mb-20 space-y-4">
+<span class="text-primary font-bold tracking-[0.2em] uppercase text-sm">Why Vegecurity</span>
+<h2 class="text-4xl md:text-5xl font-headline font-extrabold text-on-surface max-w-2xl leading-tight">
+                        We don't just host projects. <br/>We <span class="text-secondary">curate excellence.</span>
+</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Feature 1: AI-Verified Projects -->
+<div class="md:col-span-7 bg-surface-container-lowest p-12 rounded-[2rem] relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 signature-gradient opacity-5 rounded-full blur-3xl -mr-20 -mt-20"></div>
+<div class="relative z-10 flex flex-col justify-between h-full">
+<div>
+<span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="psychology">psychology</span>
+<h4 class="text-3xl font-headline font-bold mb-4 text-on-surface">AI-Verified Projects</h4>
+<p class="text-on-surface-variant text-lg max-w-md leading-relaxed">
+                                    Every project specification is audited by our proprietary AI to ensure clarity, fair market value, and technical feasibility before listing.
+                                </p>
+</div>
+<div class="mt-12 flex gap-4">
+<div class="px-4 py-2 bg-primary-container/20 rounded-full text-xs font-bold text-primary">Smart Contracts</div>
+<div class="px-4 py-2 bg-primary-container/20 rounded-full text-xs font-bold text-primary">Risk Mitigation</div>
+</div>
+</div>
+</div>
+<!-- Feature 2: Top Tech Talent -->
+<div class="md:col-span-5 amethyst-gradient p-12 rounded-[2rem] text-white flex flex-col justify-between group">
+<div>
+<span class="material-symbols-outlined text-white text-5xl mb-6" data-icon="star_rate" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<h4 class="text-3xl font-headline font-bold mb-4">Top Tech Talent</h4>
+<p class="text-white/80 text-lg leading-relaxed">
+                                Our community consists of senior-tier engineers who undergo a rigorous 4-step vetting process.
+                            </p>
+</div>
+<div class="mt-8 flex -space-x-4">
+<img alt="Talent 1" class="w-12 h-12 rounded-full border-2 border-white" data-alt="Portrait of a smiling young professional developer in a bright studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOj_Cr1xQitlx_kOrA4-CgO2y-5IJZ9NEVsqe3XqXSPH-j3A-Xek7iH6A6MwADHI2u_8Jr7MMR28ki7_JSaD9p68TZVIQU8JWOoLrn0v6FMB5zQkh_qd1r9MXwJKZKiP3U0PKYRtxZwDvoVm4z9T2KjlpLdgWXO3entpv6480GPi6OGqX0TUFOOWWCiaJL1B1mAo8vQrdhx2SlsTH9A_mRg4ct0HdF2M2ylGd7gsCarlzPqxWNsHuKbm04L1uvpX6FBSEXDJseY3s"/>
+<img alt="Talent 2" class="w-12 h-12 rounded-full border-2 border-white" data-alt="Close-up of a confident female software engineer with a modern office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCdUk4qqM3gDK1tXfmlta6kF6m_JqFdMbABCt7rIWLP9tXgp5Mj_yoCcwS5u1xYbn2vzx3Mqy7PPwHFTUkv7QYPfFjjkWw2Dtg9L7i5BVmcreR_uoTM8SxUdoxMMdx70njhJ92NZU-slQ54gnhm_vNMRMCeBCvasQFAMgo9XoSVpe2j2diNk_yPV-hoQ4LOEoxofg1hZtE5rGFeZC-MhiO3txf6fOQA4xdkMxtkJ8uWhAh4u6p8VPVCRIwKM9kVOYlPf0egpRpzT8"/>
+<img alt="Talent 3" class="w-12 h-12 rounded-full border-2 border-white" data-alt="Friendly male data scientist wearing glasses in a soft-lit environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpRowT2ZQb2SoMjQzuDoDmcbi9AGEcCmoyPYmExrPUqhWonNVtca8V-gt-As0TrDvWJI1HNUxaiko5eVu8igTKbAwwWzioGGcb7b9qyB9AzfsHETmCpb8cUfkCk-ZBsXkZcb0lxNf7rv4EOJisORJVJVR3f32lcE2fH3ErQ2g2uVZXNxTt4CHChByQ8BqJ0QP7moBVNqI8gTjQ46v4iK46Y6IqoqsJ11cKyK2rA0jo6zkGjhBxzW8Lr7cuco3a_ET9pQeXt_g9P1s"/>
+<div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-xs font-bold border-2 border-white/40">+8k</div>
+</div>
+</div>
+<!-- Secondary Features -->
+<div class="md:col-span-4 bg-surface-container p-8 rounded-[2rem]">
+<h5 class="text-xl font-bold mb-2 text-on-surface">Secure Escrow</h5>
+<p class="text-on-surface-variant text-sm">Payments are locked in secure smart contracts, released only when milestones are AI-validated.</p>
+</div>
+<div class="md:col-span-4 bg-surface-container p-8 rounded-[2rem]">
+<h5 class="text-xl font-bold mb-2 text-on-surface">Global Payouts</h5>
+<p class="text-on-surface-variant text-sm">Receive or send payments in 120+ currencies including stablecoins and major fiat.</p>
+</div>
+<div class="md:col-span-4 bg-surface-container p-8 rounded-[2rem]">
+<h5 class="text-xl font-bold mb-2 text-on-surface">Modern API</h5>
+<p class="text-on-surface-variant text-sm">Integrate your existing workflow with our robust developer-first API and CLI tools.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Footer Prep Section -->
+<section class="py-24 px-8 container mx-auto">
+<div class="bg-on-surface rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute inset-0 signature-gradient opacity-10"></div>
+<h3 class="text-white text-4xl md:text-5xl font-headline font-extrabold mb-6 relative z-10">Ready to evolve your career?</h3>
+<p class="text-white/60 text-xl max-w-2xl mx-auto mb-10 relative z-10">Join 15,000+ developers and elite clients on the world's most secure freelancing ecosystem.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+<button class="bg-primary-container text-on-primary-container px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all">Get Started Now</button>
+<button class="bg-white/10 text-white backdrop-blur-md px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all">View Marketplace</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-slate-50 dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 w-full max-w-[1920px] mx-auto">
+<div class="flex flex-col gap-2">
+<span class="font-plus-jakarta font-bold text-slate-900 dark:text-white text-xl">Vegecurity</span>
+<p class="font-be-vietnam text-xs text-slate-500">© 2024 Vegecurity. High-end Freelancing for the Modern Web.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-be-vietnam text-xs text-slate-500 hover:text-cyan-500 transition-colors" href="#">Terms of Service</a>
+<a class="font-be-vietnam text-xs text-slate-500 hover:text-cyan-500 transition-colors" href="#">Privacy Policy</a>
+<a class="font-be-vietnam text-xs text-slate-500 hover:text-cyan-500 transition-colors" href="#">Help Center</a>
+<a class="font-be-vietnam text-xs text-slate-500 hover:text-cyan-500 transition-colors" href="#">API Docs</a>
+</div>
+<div class="flex gap-4">
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors" data-icon="hub">hub</button>
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors" data-icon="groups">groups</button>
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors" data-icon="share">share</button>
+</div>
+</div>
+</footer>
+</body></html>

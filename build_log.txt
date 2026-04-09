@@ -1,0 +1,22 @@
+
+> frontend@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.2.2 (Turbopack)
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 3.4s
+  Running TypeScript ...
+Failed to type check.
+
+./src/app/jobs/page.tsx:59:30
+Type error: Property 'urgent' does not exist on type '{ id: number; title: string; budget: string; urgency: string; type: string; tags: string[]; posted: string; featured: boolean; }'.
+
+  57 |                     <div className="flex gap-2">
+  58 |                       <span className={`px-4 py-1.5 text-[10px] font-extrabold uppercase t...
+> 59 |                         {job.urgent === "Urgent" ? "Urgent Priority" : "Verified"}
+     |                              ^
+  60 |                       </span>
+  61 |                     </div>
+  62 |                     <button className={`${job.featured ? "text-white/40 hover:text-cyan-40...
+Next.js build worker exited with code: 1 and signal: null

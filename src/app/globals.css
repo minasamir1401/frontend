@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw;
+  scroll-behavior: smooth;
+}
+
+/* Font classes for Tailwind v4 */
+.font-plus-jakarta {
+  font-family: "Outfit", sans-serif;
+}
+
+.font-be-vietnam {
+  font-family: "Outfit", sans-serif;
+}
+
+.font-arabic {
+  font-family: "IBM Plex Sans Arabic", "Outfit", system-ui, sans-serif;
+  direction: rtl;
+}
+
+@theme {
+  --font-headline: "Outfit", sans-serif;
+  --font-body: "Outfit", sans-serif;
+  --font-label: "Outfit", sans-serif;
+
+  --color-primary-container: #00d2ff;
+  --color-on-error-container: #570008;
+  --color-on-tertiary-fixed: #001444;
+  --color-on-primary-container: #004253;
+  --color-on-tertiary: #f1f2ff;
+  --color-surface-container-highest: #c8e0f8;
+  --color-error: #b31b25;
+  --color-tertiary-container: #94aeff;
+  --color-on-secondary-fixed: #580078;
+  --color-surface-variant: #c8e0f8;
+  --color-on-primary-fixed: #002c38;
+  --color-surface-container-low: #e7f2ff;
+  --color-inverse-on-surface: #8e9faf;
+  --color-on-secondary-fixed-variant: #792c97;
+  --color-error-dim: #9f0519;
+  --color-tertiary: #2f55b7;
+  --color-inverse-surface: #010f1c;
+  --color-primary-dim: #00576b;
+  --color-surface-bright: #f2f7ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-tertiary-dim: #2048ab;
+  --color-secondary: #8539a3;
+  --color-on-secondary-container: #6e218d;
+  --color-primary-fixed-dim: #00c3ed;
+  --color-on-surface: #21303e;
+  --color-inverse-primary: #00d2ff;
+  --color-secondary-fixed-dim: #ebadff;
+  --color-outline-variant: #9fafc0;
+  --color-outline: #697988;
+  --color-secondary-container: #f2c1ff;
+  --color-on-background: #21303e;
+  --color-error-container: #fb5151;
+  --color-on-surface-variant: #4d5d6c;
+  --color-primary-fixed: #00d2ff;
+  --color-secondary-dim: #782b96;
+  --color-surface-dim: #bed7f1;
+  --color-on-error: #ffefee;
+  --color-tertiary-fixed-dim: #809fff;
+  --color-tertiary-fixed: #94aeff;
+  --color-surface-tint: #00647b;
+  --color-on-tertiary-fixed-variant: #00318c;
+  --color-on-primary: #e1f6ff;
+  --color-surface-container-high: #cfe5fc;
+  --color-secondary-fixed: #f2c1ff;
+  --color-primary: #00647b;
+  --color-on-tertiary-container: #002a79;
+  --color-background: #f2f7ff;
+  --color-surface: #f2f7ff;
+  --color-on-secondary: #ffedff;
+  --color-surface-container: #d7eaff;
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+  .signature-gradient {
+    background: linear-gradient(135deg, #00647b 0%, #00d2ff 100%);
+  }
+  .amethyst-gradient {
+    background: linear-gradient(135deg, #8539a3 0%, #f2c1ff 100%);
+  }
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse-slow {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes orbit {
+  0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spin-reverse-slow 25s linear infinite;
+}
+
+.animate-orbit {
+  animation: orbit 15s linear infinite;
+}
+
+.animate-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Shared dark-glass sections for consistent inner pages */
+.platform-page {
+  background:
+    radial-gradient(circle at 15% 15%, rgba(6, 182, 212, 0.08), transparent 35%),
+    radial-gradient(circle at 85% 15%, rgba(59, 130, 246, 0.08), transparent 30%),
+    linear-gradient(180deg, #020617 0%, #0f172a 100%);
+}
+
+.glass-panel {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 182, 212, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 182, 212, 0.6);
+}
