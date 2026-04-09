@@ -425,6 +425,7 @@ export default function Page() {
           <div className="space-y-6">
              <h5 className="text-xs font-bold uppercase tracking-widest text-slate-400">{t('joinOurVision')}</h5>
              <button onClick={() => handleAction("Newsletter signup")} className="w-full py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl font-bold text-sm">{t('subscribe')}</button>
+             <p className="text-[9px] text-slate-400 opacity-50 text-center md:text-start mt-4 font-mono">Build v0.2.2-Elite</p>
           </div>
         </div>
       </footer>

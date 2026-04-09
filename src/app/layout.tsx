@@ -4,9 +4,9 @@ import ClientProviders from "@/components/providers/ClientProviders";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Vegecurity - High-End Freelancing",
+  title: "MG - Elite Developer Ecosystem",
   description:
-    "The elite marketplace where AI-verified projects meet world-class engineering talent.",
+    "The premier engineering marketplace for elite software talent and high-integrity projects.",
 };
 
 export default function RootLayout({
