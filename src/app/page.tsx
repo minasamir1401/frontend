@@ -12,7 +12,7 @@ export default function Page() {
   };
 
   return (
-    <div className={`bg-slate-50 dark:bg-slate-950 min-h-screen ${isRtl ? 'font-arabic' : ''}`}>
+    <div className={`bg-cyan-50/30 dark:bg-slate-950 min-h-screen ${isRtl ? 'font-arabic' : ''}`}>
       <Header />
       
       <main className="pt-40 md:pt-52">
