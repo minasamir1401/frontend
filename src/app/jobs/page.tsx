@@ -62,11 +62,11 @@ export default function Page() {
   }, [isRtl]);
 
   return (
-    <div className={`bg-slate-50 dark:bg-slate-950 min-h-screen relative overflow-hidden ${isRtl ? 'font-arabic' : ''}`}>
+    <div className={`bg-slate-50 dark:bg-slate-950 min-h-screen relative overflow-hidden animate-ui-fade-in ${isRtl ? 'font-arabic' : ''}`} style={{ animationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }}>
       {/* Background Code/Scientific Aesthetics */}
       <div className="fixed inset-0 pointer-events-none select-none z-0">
          <div className="absolute top-1/4 -left-20 opacity-[0.02] dark:opacity-[0.03] text-[20vw] font-mono font-black text-cyan-600 rotate-12">{"{}"}</div>
-         <div className="absolute top-3/4 -right-20 opacity-[0.02] dark:opacity-[0.03] text-[20vw] font-mono font-black text-slate-500 -rotate-12 animate-pulse transition-all">{"</>"}</div>
+         <div className="absolute top-3/4 -right-20 opacity-[0.02] dark:opacity-[0.03] text-[20vw] font-mono font-black text-slate-500 -rotate-12 animate-system-pulse transition-all">{"</>"}</div>
          <div className="absolute top-0 right-1/3 w-[600px] h-[600px] bg-cyan-400/5 rounded-full blur-[150px] opacity-30"></div>
       </div>
 
@@ -78,7 +78,7 @@ export default function Page() {
         <main className={`flex-1 ${isRtl ? 'mr-0 md:mr-80' : 'ml-0 md:ml-80'} p-8 text-start`}>
           <div className="max-w-6xl mx-auto space-y-12">
             
-            <section className={`flex flex-col md:flex-row justify-between items-end gap-6 border-b border-slate-200/50 pb-8 ${isRtl ? 'md:flex-row-reverse' : ''}`}>
+            <section className={`flex flex-col md:flex-row justify-between items-end gap-6 border-b border-slate-200/50 pb-8 animate-ui-slide-down ${isRtl ? 'md:flex-row-reverse' : ''}`}>
               <div className="space-y-2 w-full">
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-plus-jakarta tracking-tight break-words">{t('marketplace')}</h1>
                 <p className="text-slate-500 font-medium text-sm sm:text-base">{t('explorePremium')}</p>
@@ -93,7 +93,7 @@ export default function Page() {
                     className={`${isRtl ? 'pr-12 pl-6' : 'pl-12 pr-6'} py-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500/50 outline-none w-full sm:w-80 transition-all font-be-vietnam text-sm`}
                   />
                 </div>
-                <button className="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-500 hover:text-cyan-600 transition-all active:scale-95 w-full sm:w-auto">
+                <button className="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-500 hover:text-cyan-600 hover:animate-btn-bounce transition-all active:scale-95 w-full sm:w-auto">
                   <span className="material-symbols-outlined">tune</span>
                 </button>
               </div>
@@ -102,12 +102,12 @@ export default function Page() {
             <section className="grid grid-cols-1 xl:grid-cols-3 gap-8">
               {jobs.map((job, index) => (
                 <div key={job.id} 
-                  className={`group relative p-6 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] transition-all duration-700 hover:-translate-y-3 hover:shadow-2xl overflow-hidden ${
+                  className={`group relative p-6 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] transition-all duration-700 hover:-translate-y-3 hover:shadow-2xl overflow-hidden animate-ui-slide-down hover:animate-card-glow ${
                   job.featured 
                   ? "bg-slate-900 text-white shadow-2xl shadow-cyan-500/10 xl:col-span-2 2xl:col-span-1" 
                   : "bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:shadow-cyan-500/5"
                 }`}
-                  style={{ animation: `fadeIn 0.5s ease-out ${index * 0.1}s forwards`, opacity: 0 }}
+                  style={{ animationDelay: `${index * 150}ms`, animationFillMode: 'both' }}
                 >
                   {/* Subtle code backdrop for cards */}
                   <div className="absolute -bottom-4 -right-4 text-[8rem] font-mono font-black text-slate-500/5 dark:text-cyan-500/5 pointer-events-none group-hover:scale-110 transition-transform duration-700">
@@ -151,14 +151,15 @@ export default function Page() {
                     </div>
                     <Link 
                       href={`/jobs/${job.id}`}
-                      className={`w-full sm:w-auto px-8 py-3.5 rounded-full font-extrabold text-sm transition-all active:scale-95 text-center flex items-center justify-center gap-2 ${
+                      className={`w-full sm:w-auto px-8 py-3.5 rounded-full font-extrabold text-sm transition-all hover:animate-btn-bounce active:scale-95 text-center flex items-center justify-center gap-2 group/btn relative overflow-hidden ${
                         job.featured 
-                        ? "bg-cyan-500 text-slate-900 hover:bg-cyan-400 shadow-lg shadow-cyan-500/20" 
-                        : "bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:brightness-110 shadow-lg"
+                        ? "bg-cyan-500 text-slate-900 shadow-lg shadow-cyan-500/20" 
+                        : "bg-slate-900 dark:bg-white text-white dark:text-slate-900 shadow-lg"
                       }`}
                     >
+                      <span className={`absolute inset-0 opacity-0 group-hover/btn:animate-btn-ripple rounded-full pointer-events-none ${job.featured ? 'bg-white/20' : 'bg-white/10 dark:bg-slate-900/10'}`}></span>
                       {isRtl ? 'عرض التفاصيل' : 'View Code'}
-                      <span className={`material-symbols-outlined text-sm transition-transform group-hover:translate-x-1 ${isRtl ? 'rotate-180 group-hover:-translate-x-1' : ''}`}>arrow_forward</span>
+                      <span className={`material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1 ${isRtl ? 'rotate-180 group-hover/btn:-translate-x-1' : ''}`}>arrow_forward</span>
                     </Link>
                   </div>
                 </div>

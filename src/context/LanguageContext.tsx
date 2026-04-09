@@ -116,6 +116,9 @@ const translations: Record<Language, Record<string, string>> = {
     step3Desc: "Automated testing and production deployment.",
     joinCtaTitle: "Ready to write the future?",
     beginCompileBtn: "Begin Compilation",
+
+    testimonialsTitle: "What engineers say",
+    testimonialsSubtitle: "Real feedback from developers and clients on the platform.",
     
     sysDocTitle: "System Documentation",
     sysDoc1: "How are engineers vetted?",
@@ -238,6 +241,9 @@ const translations: Record<Language, Record<string, string>> = {
     step3Desc: "عمليات فحص مؤتمتة ونشر مباشر على بيئة الإنتاج.",
     joinCtaTitle: "هل أنت مستعد لكتابة كود المستقبل؟",
     beginCompileBtn: "ابدأ عملية بناء نظامك",
+
+    testimonialsTitle: "ماذا يقول المطورون؟",
+    testimonialsSubtitle: "آراء حقيقية من مبرمجين وعملاء عن تجربتهم على المنصة.",
 
     sysDocTitle: "مستندات النظام المرجعية (FAQ)",
     sysDoc1: "كيف يتم تقييم المهندسين المتقدمين؟",
